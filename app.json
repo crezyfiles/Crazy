@@ -11,31 +11,31 @@
   "env": {
     "TG_BOT_TOKEN": {
       "description": "Your Bot token, Get it from @Botfather",
-      "value": ""
+      "value": "6306012629:AAH4rjOlMP1njDw8PrNcyFiMfZjuDsUAH-c"
     },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
-      "value": "1250450587"
+      "value": "677154183"
     },
     "APP_ID":{
       "description": "your app id, take it from my.telegram.org",
-      "value": ""
+      "value": "26858365"
     },
     "DATABASE_URL": {
       "description": "Paste your mongo db url",
-      "value": "url"
+      "value": "mongodb+srv://tgcrazyboyofficial:liYrPiitLVNvFPDE@cluster0.quq0vhj.mongodb.net/?retryWrites=true&w=majority"
     },
     "DATABASE_NAME":{
       "description": "Enter your DATABASE_NAME ",
-      "value": "filesharexbot"
+      "value": "tgcrazyboyofficial:liYrPiitLVNvFPDE"
     },
     "API_HASH":{
       "description": "your api hash, take it from my.telegram.org",
-      "value": ""
+      "value": "0c4b30a3f5b4f913de515a95af70c1b4"
     },
     "CHANNEL_ID":{
       "description": "make a channal (database channel), then make the bot as admin in channel, and it's id",
-      "value": "-100"
+      "value": "-1001667644368"
     },
     "FORCE_SUB_CHANNEL":{
       "description": "id of the channel or group, if you want enable force sub feature else put 0",
@@ -43,7 +43,7 @@
     },
     "START_MESSAGE": {
       "description": "Optional: start message of bot, use HTML parsemode format",
-      "value": "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link."
+      "value": "Hi {first}..  (ads) Watch Latest Content Review Subscribe To YouTube 👇👇https://youtube.com/@CrazyCineView https://youtube.com/@CrazyCineView"
     },
     "FORCE_SUB_MESSAGE": {
       "description": "Optional: Force Sub message of bot, use HTML parsemode format",
@@ -51,7 +51,7 @@
     },
     "ADMINS": {
       "description": "A space separated list of user_ids of Admins, they can only create links",
-      "value": "",
+      "value": "677154183 5117051274",
       "required": false
     },
     "PROTECT_CONTENT": {
