@@ -11,31 +11,31 @@
   "env": {
     "TG_BOT_TOKEN": {
       "description": "Your Bot token, Get it from @Botfather",
-      "value": "6306012629:AAH4rjOlMP1njDw8PrNcyFiMfZjuDsUAH-c"
+      "value": ""
     },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
-      "value": "677154183"
+      "value": ""
     },
     "APP_ID":{
       "description": "your app id, take it from my.telegram.org",
-      "value": "26858365"
+      "value": ""
     },
     "DATABASE_URL": {
       "description": "Paste your mongo db url",
-      "value": "mongodb+srv://tgcrazyboyofficial:liYrPiitLVNvFPDE@cluster0.quq0vhj.mongodb.net/?retryWrites=true&w=majority"
+      "value": ""
     },
     "DATABASE_NAME":{
       "description": "Enter your DATABASE_NAME ",
-      "value": "tgcrazyboyofficial:liYrPiitLVNvFPDE"
+      "value": ""
     },
     "API_HASH":{
       "description": "your api hash, take it from my.telegram.org",
-      "value": "0c4b30a3f5b4f913de515a95af70c1b4"
+      "value": ""
     },
     "CHANNEL_ID":{
       "description": "make a channal (database channel), then make the bot as admin in channel, and it's id",
-      "value": "-1001667644368"
+      "value": ""
     },
     "FORCE_SUB_CHANNEL":{
       "description": "id of the channel or group, if you want enable force sub feature else put 0",
@@ -43,7 +43,7 @@
     },
     "START_MESSAGE": {
       "description": "Optional: start message of bot, use HTML parsemode format",
-      "value": "Hi {first}..  (ads) Watch Latest Content Review Subscribe To YouTube 👇👇https://youtube.com/@CrazyCineView https://youtube.com/@CrazyCineView"
+      "value": ""
     },
     "FORCE_SUB_MESSAGE": {
       "description": "Optional: Force Sub message of bot, use HTML parsemode format",
