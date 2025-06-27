@@ -35,7 +35,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 # blogger added 
 PERMANENT = bool(os.environ.get("PERMANENT", True))
-WEBSITE_URL = os.environ.get("WEBSITE_URL", "https://infinityfilestorerobot.blogspot.com/2024/08/infinityfilestorerobot.html")
+WEBSITE_URL = os.environ.get("WEBSITE_URL", "https://crazyboyofficialfilestore.blogspot.com/2025/06/crazyboyofficial.html")
 
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\n(ads) This Is A File Share Bot By Team CrazyboyOfficial")
