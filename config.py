@@ -7,41 +7,41 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "8072908948:AAEqi_KH0UuSpqkHK2Gvb0Henk64QTcGDcY")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", ""))
+APP_ID = int(os.environ.get("APP_ID", "26858365"))
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "0c4b30a3f5b4f913de515a95af70c1b4")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001667644368"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+OWNER_ID = int(os.environ.get("OWNER_ID", "677154183"))
 
 #Port
-PORT = os.environ.get("PORT", "")
+PORT = os.environ.get("PORT", "8888")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "")
-DB_NAME = os.environ.get("DATABASE_NAME", "")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://tgcrazyboyofficial:liYrPiitLVNvFPDE@cluster0.quq0vhj.mongodb.net/?retryWrites=true&w=majority")
+DB_NAME = os.environ.get("DATABASE_NAME", "tgcrazyboyofficial:liYrPiitLVNvFPDE")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", ""))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001789259512"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 # blogger added 
 PERMANENT = bool(os.environ.get("PERMANENT", True))
-WEBSITE_URL = os.environ.get("WEBSITE_URL", "")
+WEBSITE_URL = os.environ.get("WEBSITE_URL", "https://infinityfilestorerobot.blogspot.com/2024/08/infinityfilestorerobot.html")
 
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\n(ads) This Is A File Share Bot By Team CrazyboyOfficial")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "677154183 5117051274").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
