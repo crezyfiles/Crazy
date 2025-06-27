@@ -7,9 +7,16 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import FloodWait
 
 from bot import Bot
-from config import ADMINS, CHANNEL_ID, DISABLE_CHANNEL_BUTTON
+from config import ADMINS, CHANNEL_ID, DISABLE_CHANNEL_BUTTON, WEBSITE_URL, PERMANENT
 from helper_func import encode
 
+
+def get_markup(link: str):
+    return InlineKeyboardMarkup(
+        [[InlineKeyboardButton("🔗 Open Link", url=link)]]
+    )
+    
+   
 @Bot.on_message(filters.private & filters.user(ADMINS) & ~filters.command(['start','users','broadcast','batch','genlink','stats']))
 async def channel_post(client: Client, message: Message):
     reply_text = await message.reply_text("Please Wait...!", quote = True)
@@ -25,8 +32,13 @@ async def channel_post(client: Client, message: Message):
     converted_id = post_message.id * abs(client.db_channel.id)
     string = f"get-{converted_id}"
     base64_string = await encode(string)
-    link = f"https://t.me/{client.username}?start={base64_string}"
-
+    if PERMANENT:
+        link = f"{WEBSITE_URL}/?ref={base64_string}"
+    else:
+        link = f"https://t.me/{client.username}?start={base64_string}"
+        
+    reply_markup = get_markup(link)
+    
     await reply_text.edit(f"<b>Here is your link</b>\n\n{link}", reply_markup=reply_markup, disable_web_page_preview = True)
 
     if not DISABLE_CHANNEL_BUTTON:
@@ -41,7 +53,12 @@ async def new_post(client: Client, message: Message):
     converted_id = message.id * abs(client.db_channel.id)
     string = f"get-{converted_id}"
     base64_string = await encode(string)
-    link = f"https://t.me/{client.username}?start={base64_string}"
+    
+    reply_markup = get_markup(link) if not DISABLE_CHANNEL_BUTTON else None
+    if PERMANENT:
+        link = f"{WEBSITE_URL}/?ref={base64_string}"
+    else:
+        link = f"https://t.me/{client.username}?start={base64_string}"
     try:
         await message.edit_reply_markup(reply_markup)
     except Exception as e:
