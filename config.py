@@ -34,8 +34,8 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001789259512"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 # blogger added 
-PERMANENT = bool(os.environ.get("PERMANENT", True))
-WEBSITE_URL = os.environ.get("WEBSITE_URL", "https://crazyboyofficialfilestore.blogspot.com/p/crazyboyofficial.html")
+PERMANENT = bool(os.environ.get("PERMANENT", False))
+WEBSITE_URL = os.environ.get("WEBSITE_URL", "")
 
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\n This Is A File Share Bot By Team CrazyboyOfficial")
