@@ -1,12 +1,9 @@
 #(©)CodeXBotz
 
 
-
-
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-
 
 
 #Bot token @Botfather
@@ -35,6 +32,10 @@ DB_NAME = os.environ.get("DATABASE_NAME", "")
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", ""))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
+
+# blogger added 
+PERMANENT = bool(os.environ.get("PERMANENT", True))
+WEBSITE_URL = os.environ.get("WEBSITE_URL", "")
 
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\n(ads) This Is A File Share Bot By Team CrazyboyOfficial")
