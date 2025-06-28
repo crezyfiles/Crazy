@@ -33,7 +33,7 @@ async def channel_post(client: Client, message: Message):
     string = f"get-{converted_id}"
     base64_string = await encode(string)
     if PERMANENT:
-        link = f"{WEBSITE_URL}/?ref={base64_string}"
+        link = f"{WEBSITE_URL}?ref={base64_string}"
     else:
         link = f"https://t.me/{client.username}?start={base64_string}"
         
@@ -56,7 +56,7 @@ async def new_post(client: Client, message: Message):
     
     reply_markup = get_markup(link) if not DISABLE_CHANNEL_BUTTON else None
     if PERMANENT:
-        link = f"{WEBSITE_URL}/?ref={base64_string}"
+        link = f"{WEBSITE_URL}?ref={base64_string}"
     else:
         link = f"https://t.me/{client.username}?start={base64_string}"
     try:
