@@ -36,7 +36,7 @@ async def batch(client: Client, message: Message):
     string = f"get-{f_msg_id * abs(client.db_channel.id)}-{s_msg_id * abs(client.db_channel.id)}"
     base64_string = await encode(string)
     if PERMANENT:
-        link = f"{WEBSITE_URL}/?ref={base64_string}" 
+        link = f"{WEBSITE_URL}?ref={base64_string}" 
     else:
         link = f"https://telegram.me/{client.username}?start={base64_string}"
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
@@ -59,7 +59,7 @@ async def link_generator(client: Client, message: Message):
 
     base64_string = await encode(f"get-{msg_id * abs(client.db_channel.id)}")
     if PERMANENT:
-        link = f"{WEBSITE_URL}/?ref={base64_string}"
+        link = f"{WEBSITE_URL}?ref={base64_string}"
     else:
         link = f"https://telegram.me/{client.username}?start={base64_string}"
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
