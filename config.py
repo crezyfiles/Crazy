@@ -36,6 +36,12 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 PERMANENT = bool(os.environ.get("PERMANENT", True))
 WEBSITE_URL = os.environ.get("WEBSITE_URL", "https://officialcrazy2025.blogspot.com/p/redirect.html")
 
+# Shortner Added
+IS_SHORTLINK = bool(os.environ.get("IS_SHORTLINK", True))
+#add your shortner website link without https or http                 
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "")
+
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\n This Is A File Share Bot By Team CrazyboyOfficial")
 try:
